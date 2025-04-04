@@ -1,4 +1,42 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+}
+
+.header__theme-menu-item {
+  
+}
+
+.header__theme-menu-button_type_light {
+  background-color: transparent;
+  
+  color: #FF0070;
+  border: #FF0070 1px solid;
+}
+
+.header__theme-menu-button_type_auto {
+  background-color: transparent;
+  color: #FF0070;
+  border: #FF0070 1px solid;
+}
+
+.header__theme-menu-button_type_dark {
+  background-color: transparent;
+  color: #FF0070;
+  border: #FF0070 1px solid;
+}
+
+.header__title {
+  
+}
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
