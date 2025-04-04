@@ -1,14 +1,19 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .header {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr auto;
+}
+
+.header__theme-menu {
+  max-height: 26px;
 }
 
 .header__theme-menu-list {
   display: flex;
   gap: 10px;
+  justify-self: center;
   list-style-type: none;
+  margin-block-start: 20px;
 }
 
 .header__theme-menu-item {
@@ -17,27 +22,56 @@
 
 .header__theme-menu-button_type_light {
   background-color: transparent;
-  
+  width: 70px;
+  height: 26px;
+  padding: 1.5px 13px;
   color: #FF0070;
   border: #FF0070 1px solid;
 }
 
 .header__theme-menu-button_type_auto {
   background-color: transparent;
+  width: 70px;
+  height: 26px;
+  padding: 1.5px 13px;
   color: #FF0070;
   border: #FF0070 1px solid;
 }
 
 .header__theme-menu-button_type_dark {
   background-color: transparent;
+  width: 70px;
+  height: 26px;
+  padding: 1.5px 13px;
   color: #FF0070;
   border: #FF0070 1px solid;
 }
 
 .header__title {
-  
+  font-size: 157px;
+  max-height: 130px;
+  color: #DB00FF;
+  text-shadow: 4px 4px rgb(255, 0, 112, 1);
+  padding-top: 40px;
 }
 
 .page {
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header__subtitle {
+  display: block;
+  max-width: 491px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000028;
+  background-color: #FF0070;
+  justify-self: end;
+  margin-right: 20px;
+  margin-top: 114px;
+  white-space: pre-line;
 }
