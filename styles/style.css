@@ -1,11 +1,22 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .header {
   display: grid;
-  grid-template-rows: 1fr 1fr auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  background-image: var(--background-header-image);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  height: 768px;
+
 }
 
 .header__theme-menu {
   max-height: 26px;
+  grid-column:  1 / 3;
+  grid-row: 1;
+  justify-self: center; 
+  width: fit-content;
 }
 
 .header__theme-menu-list {
@@ -48,22 +59,25 @@
 }
 
 .header__title {
+  
+  grid-row: 2;
+  white-space: nowrap;
   font-size: 157px;
   max-height: 130px;
   color: #DB00FF;
   text-shadow: 4px 4px rgb(255, 0, 112, 1);
-  padding-top: 40px;
+  padding-top: 58px;
+  align-self: start;
 }
 
 .page {
-  background-image: url(../images/cover-image-dark.png);
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
+  background-color: var(--background-page-color);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
 .header__subtitle {
+  grid-column: 1 / 3;
+  grid-row: 3;
   display: block;
   max-width: 491px;
   font-size: 18px;
@@ -73,5 +87,10 @@
   justify-self: end;
   margin-right: 20px;
   margin-top: 114px;
+  margin-bottom: 134px;
   white-space: pre-line;
+}
+
+.main_content {
+  margin-top: 60px;
 }
