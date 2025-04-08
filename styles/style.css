@@ -80,10 +80,10 @@
   grid-row: 3;
   display: block;
   max-width: 491px;
-  font-size: 18px;
+  font-size: var(--text-font-size);
   font-weight: bold;
   color: #000028;
-  background-color: #FF0070;
+  background-color: var(--dedicated-background-color);
   justify-self: end;
   margin-right: 20px;
   margin-top: 114px;
@@ -94,3 +94,33 @@
 .main_content {
   margin-top: 60px;
 }
+
+.hard__concentration {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.hard__title {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  font-size: var(--text-font-size);
+  line-height: var(--text-font-height);
+  color: var(--text-font-color);
+  white-space: pre-line;
+  width: fit-content;
+}
+
+.hard__multitasking {
+  grid-column: 2 / 2;
+  grid-row: 1 / 2;
+  font-size: var(--text-font-size);
+  line-height: var(--text-font-height);
+  color: var(--dedicated-text-color);
+  background-color: var(--dedicated-background-color);
+  white-space: pre-line;
+  width: fit-content;
+}
+
+
