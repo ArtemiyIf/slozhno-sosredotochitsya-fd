@@ -1,125 +1,120 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-.header {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+
+.page {
+  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--background-header-image);
-  background-size: cover;
+  background-color: var(--background-page-color);
   background-position: center;
-  min-height: 100vh;
-  height: 768px;
+  background-size: cover;
+  background-attachment: fixed; /* фиксированная фоновая картинка */
+}
+
+.header {
+  position: relative; /* Относительное позиционирование для дочерних абсолютно позиционированных элементов */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 60px;
+  grid-auto-flow: dense; /* Автоматическое заполнение пустых ячеек */
+  height: 100vh;
+  padding: 20px;
+}
+
+.header__rec-label {
+  display: var(--block-visible);
+  align-items: center;
+  position: absolute;
 
 }
 
+.header__rec-text {
+  font-size: var(--text-font-size);
+  color: var(--text-font-color);
+  text-transform: uppercase;
+}
+
+.decorated-zone::before {
+  position: absolute;
+  content: '';
+  border-top: 1px solid var(--corner-decorate-color);
+  border-right: 1px solid var(--corner-decorate-color);
+  width: 25px;
+  height: 25px;
+  right: 20px;
+  top: 20px;
+}
+
+.decorated-zone::after {
+  position: absolute;
+  content: '';
+  border-bottom: 1px solid var(--corner-decorate-color);
+  border-left: 1px solid var(--corner-decorate-color);
+  width: 25px;
+  height: 25px;
+  left: 20px;
+  bottom: 20px;
+}
+
 .header__theme-menu {
-  max-height: 26px;
-  grid-column:  1 / 3;
-  grid-row: 1;
-  justify-self: center; 
-  width: fit-content;
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / 3;
 }
 
 .header__theme-menu-list {
   display: flex;
   gap: 10px;
-  justify-self: center;
-  list-style-type: none;
-  margin-block-start: 20px;
 }
 
-.header__theme-menu-item {
-  
+.header__theme-menu-button {
+  font-size: var(--text-font-size);
+  color: var(--button-text-color);
+  font-weight: var(--text-font-weight);
+  border: none;
+  background-color: inherit;
+  padding: 1.5px 13px; 
 }
 
-.header__theme-menu-button_type_light {
-  background-color: transparent;
-  width: 70px;
-  height: 26px;
-  padding: 1.5px 13px;
-  color: #FF0070;
-  border: #FF0070 1px solid;
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--button-outline-opacity);
 }
 
-.header__theme-menu-button_type_auto {
-  background-color: transparent;
-  width: 70px;
-  height: 26px;
-  padding: 1.5px 13px;
-  color: #FF0070;
-  border: #FF0070 1px solid;
+.header__theme-menu-button:focus {
+  outline: none;
 }
 
-.header__theme-menu-button_type_dark {
-  background-color: transparent;
-  width: 70px;
-  height: 26px;
-  padding: 1.5px 13px;
-  color: #FF0070;
-  border: #FF0070 1px solid;
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--button-outline-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--button-outline-color);
 }
 
 .header__title {
-  
-  grid-row: 2;
-  white-space: nowrap;
-  font-size: 157px;
-  max-height: 130px;
-  color: #DB00FF;
-  text-shadow: 4px 4px rgb(255, 0, 112, 1);
-  padding-top: 58px;
-  align-self: start;
-}
-
-.page {
-  background-color: var(--background-page-color);
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  display: flex;
+  align-items: start;
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  font-size: var(--banner-font-size);
+  font-weight: var(--text-font-weight);
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-weight: bold;
 }
 
 .header__subtitle {
-  grid-column: 1 / 3;
-  grid-row: 3;
-  display: block;
-  max-width: 491px;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  height: fit-content;
+  white-space: pre-line; 
+}
+
+.decor__subtitle {
+  font-weight: var(--bold-font-weight);
   font-size: var(--text-font-size);
-  font-weight: bold;
-  color: #000028;
-  background-color: var(--dedicated-background-color);
-  justify-self: end;
-  margin-right: 20px;
-  margin-top: 114px;
-  margin-bottom: 134px;
-  white-space: pre-line;
-}
-
-.main_content {
-  display: grid;
-  gap: 80px;
-}
-
-.content-section {
-  font-size: 18px;
-  font-style: normal;
-  line-height: 23.4px;
-}
-  
-
-.content-section__title {
-  color: var(--accent-color);
-  font-weight: 700;
-}
-
-.text-blocks {
-  display: grid;
-  gap: 20px;
-}
-
-.text-block__title {
-  background-color: var(--accent-color);
+  line-height: var(--text-font-height);
   color: var(--dedicated-text-color);
-  margin-bottom: 20px;
-}
+  background-color: var(--dedicated-background-color);
 
-.text-block__content {
-  color: var(--main-text-color);
 }
-
