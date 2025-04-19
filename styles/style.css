@@ -374,6 +374,8 @@
   object-fit: cover;
 }
 
+/* Футер */
+
 .footer {
   display: flex;
   justify-content: center;
