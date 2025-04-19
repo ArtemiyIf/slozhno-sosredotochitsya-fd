@@ -13,4 +13,45 @@
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
+  --background-header-image: url(../image/cover-image-light.png); 
+  --background-page-color: #FFF1F7;
+  --text-font-size: 18px;
+  --text-font-height: 23px;
+  --text-font-weight: 400;
+  --text-font-color: #353430;
+  --bold-font-weight: 700;
+  --accent-color: #FF8DCB;
+  --dedicated-background-color: #FF8DCB;
+  --dedicated-text-color: #353430;
+  --main-text-color: #F1B2CE;
+  --block-visible: none; 
+  --corner-decorate-color: #353430;
+  --button-text-color: #353430;
+  --button-outline-color: #353430;
+  --article-title-color: #353430;
+  --button-outline-opacity: rgba(50, 49, 45, 0.4);
+  --main-title-color: #FFC2E6;
+}
+
+@media (prefers-color-scheme: light) {
+  .pade {
+    --background-header-image: url(../image/cover-image-light.png); 
+    --background-page-color: #FFF1F7;
+    --text-font-size: 18px;
+    --text-font-height: 23px;
+    --text-font-weight: 400;
+    --text-font-color: #353430;
+    --bold-font-weight: 700;
+    --accent-color: #FF8DCB;
+    --dedicated-background-color: #FF8DCB;
+    --dedicated-text-color: #353430;
+    --main-text-color: #F1B2CE;
+    --block-visible: none; 
+    --corner-decorate-color: #353430;
+    --button-text-color: #353430;
+    --button-outline-color: #353430;
+    --article-title-color: #353430;
+    --button-outline-opacity: rgba(50, 49, 45, 0.4);
+    --main-title-color: #FFC2E6;
+  }
 }

@@ -13,6 +13,45 @@
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
+  --background-header-image: url(../image/cover-image-dark.png); 
+  --background-page-color: #000028;
+  --text-font-size: 18px;
+  --text-font-height: 23px;
+  --text-font-weight: 400;
+  --text-font-color: #FF0070;
+  --bold-font-weight: 700;
+  --accent-color: #FF0070;
+  --dedicated-background-color: #FF0070;
+  --dedicated-text-color: #000028;
+  --main-text-color: #F1B2CE;
+  --block-visible: flex; 
+  --corner-decorate-color: #FF0070;
+  --button-text-color: #FF0070;
+  --button-outline-color: #FF0070;
+  --article-title-color: #FF0070;
+  --button-outline-opacity: rgba(255, 0, 112, 0.4);
+  --main-title-color: #DB00FF;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
   --background-header-image: url(../image/cover-image-dark.png);
   --background-page-color: #000028;
+  --text-font-size: 18px;
+  --text-font-height: 23px;
+  --text-font-weight: 400;
+  --text-font-color: #FF0070;
+  --bold-font-weight: 700;
+  --accent-color: #FF0070;
+  --dedicated-background-color: #FF0070;
+  --dedicated-text-color: #000028;
+  --main-text-color: #F1B2CE;
+  /* --block-visible: flex; */
+  --corner-decorate-color: #FF0070;
+  --button-text-color: #FF0070;
+  --button-outline-color: #FF0070;
+  --article-title-color: #FF0070;
+  --button-outline-opacity: rgba(255, 0, 112, 0.4);
+  --main-title-color: #DB00FF;
+  }
 }
