@@ -15,11 +15,7 @@
   /* Вам также нужно будет написать ряд подобных селекторов */
   --background-header-image: url(../images/cover-image-light.png); 
   --background-page-color: #FFF1F7;
-  --text-font-size: 18px;
-  --text-font-height: 23.4px;
-  --text-font-weight: 400;
-  --text-font-color: #353430;
-  --bold-font-weight: 700;
+  --text-font-color: #353430;;
   --accent-color: #FF8DCB;
   --dedicated-background-color: #FF8DCB;
   --dedicated-text-color: #353430;
@@ -37,11 +33,7 @@
   .page {
     --background-header-image: url(../images/cover-image-light.png); 
     --background-page-color: #FFF1F7;
-    --text-font-size: 18px;
-    --text-font-height: 23.4px;
-    --text-font-weight: 400;
     --text-font-color: #353430;
-    --bold-font-weight: 700;
     --accent-color: #FF8DCB;
     --dedicated-background-color: #FF8DCB;
     --dedicated-text-color: #353430;

@@ -29,6 +29,7 @@
   grid-auto-flow: dense; /* Автоматическое заполнение пустых ячеек */
   height: 100vh;
   padding: 20px;
+  min-block-size: 668px;
 }
 
 @media (width <= 668px) {
@@ -44,7 +45,6 @@
   position: absolute;
   gap: 6px;
   width: 56px;
-  height: 26px;
   right: 26px;
   top: 20px;
 }
