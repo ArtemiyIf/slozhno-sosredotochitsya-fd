@@ -258,6 +258,13 @@
   gap: 20px; 
 } 
 
+@media (width <= 768px) {
+  .causes__article {
+    grid-template-columns: 1fr
+  }
+}
+
+
 .causes__article-text {
   grid-column: auto;
 }
