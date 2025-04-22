@@ -26,6 +26,7 @@
   --article-title-color: #FF0070;
   --button-outline-opacity: rgba(255, 0, 112, 0.4);
   --main-title-color: #DB00FF;
+  --block-visible: flex; 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,5 +44,6 @@
   --article-title-color: #FF0070;
   --button-outline-opacity: rgba(255, 0, 112, 0.4);
   --main-title-color: #DB00FF;
+  --block-visible: flex; 
   }
 }
