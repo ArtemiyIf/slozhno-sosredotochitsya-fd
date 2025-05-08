@@ -51,15 +51,29 @@
 
 @media (width <= 668px) {
   .header__rec-label {
-    top: 10px;
+    top: 11px;
     right: 15px;
   }
 }
 
-.header__rec-text {
+.header__rec {
   font-size: var(--text-font-size);
   color: var(--text-font-color);
   text-transform: uppercase;
+}
+
+.header__rec::after {
+  content: '';
+  position: absolute;
+  inline-size: 10px;
+  block-size: 10px;
+  margin: -5px -20px 0 0;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--nav-color);
+  background-color: var(--nav-color);
+  inset-inline-end: 0;
+  inset-block-start: 50%;
+  right: 22px;
 }
 
 .decorated-zone::before {
@@ -120,6 +134,7 @@
   .header__theme-menu-list {
     gap: 10px;
     flex-direction: column;
+    margin-top: -5px;
   }
 }
 
@@ -414,7 +429,6 @@
 @media (width <= 688px) {
   .footer__text {
     font-size: var(--phone-banner-font-size);
-    margin-top: 25px;
   }
 }
 
